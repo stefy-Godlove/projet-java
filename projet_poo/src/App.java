@@ -56,17 +56,19 @@ public class App {
         // adherents.Emprunter(emprunt);
         // emprunt = new Emprunt("ide22", date.valueOf(""+LocalDate.now()), date.valueOf(""+LocalDate.now()), "ddd2");
         // adherents.Emprunter(emprunt);
-        adherents.afficheEmprunt();
-        adherents.Remettre("ddd2", "ide22",  date.valueOf(""+LocalDate.now()));
-        System.out.println("-------------------------------------------------------");
-        adherents.afficheEmprunt();
-        adherents.EmpruntDepasse("ddd", "ide111", date);
+        // adherents.afficheEmprunt();
+        // adherents.Remettre("ddd2", "ide22",  date.valueOf(""+LocalDate.now()));
+        // System.out.println("-------------------------------------------------------");
+        // adherents.afficheEmprunt();
+        // adherents.EmpruntDepasse("ddd", "ide111", date);
         // Scanner scanner = new Scanner(System.in);
         // System.out.println("entrer le codd du livre que vous souhaite rendre");
         // String codeD = scanner.nextLine();
         // System.out.println("entrer votre code "); 
         // String IdEm = scanner.nextLine();
         // System.out.println("entrer la date d'emprunt");
+
+        ConnexionBD.connexion();
 
 
 

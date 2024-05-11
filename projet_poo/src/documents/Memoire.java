@@ -3,14 +3,16 @@ package documents;
 import java.util.Date;
 
 public class Memoire extends Document{
+    //attribut
     private String nomCandidat;
     private Date dateSoutenance;
- 
+        //construteur
     public Memoire(String titre, String localisation, int code, int nbreExemplaire, String nomCandidat, Date dateSoutenance) {
         super(titre, localisation, code, nbreExemplaire);
         this.nomCandidat = nomCandidat;
         this.dateSoutenance = dateSoutenance;
     }
+    //getter et setter
     public String getNomCandidat() {
         return nomCandidat;
     }
@@ -23,6 +25,7 @@ public class Memoire extends Document{
     public void setDateSoutenance(Date dateSoutenance) {
         this.dateSoutenance = dateSoutenance;
     }
+    //methode pour afficher les caracteristiques du document
     @Override
     public String toString() {
         return "Memoire ["+ super.toString() + ", nomCandidat=" + nomCandidat + ", dateSoutenance="

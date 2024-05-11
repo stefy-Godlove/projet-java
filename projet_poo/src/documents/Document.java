@@ -1,17 +1,20 @@
 package documents;
 
 public class Document {
+    //attributs
     private String titre;
     private String localisation;
     private int code;
     private int nbreExemplaire;
     private int nbreEmpruntEff = 0;
+    //constructor
     public Document(String titre, String localisation, int code, int nbreExemplaire) {
         this.titre = titre;
         this.localisation = localisation;
         this.code = code;
         this.nbreExemplaire = nbreExemplaire;
     }
+    //getter et setter
     public String getTitre() {
         return titre;
     }
@@ -46,7 +49,7 @@ public class Document {
         this.nbreEmpruntEff = nbreEmpruntEff;
     }
 
-
+    //methode tostring
     @Override
     public String toString() {
         return "titre=" + titre + ", localisation=" + localisation  + ", code=" + code

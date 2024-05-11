@@ -3,16 +3,19 @@ package Adherents;
 import java.sql.Date;
 
 public class Emprunt {
+    //attributs
     private String emprunteurId;
     private Date dateDeDebut;
     private Date dateLimite;
     private int codeDocument;
+    //contructeur
     public Emprunt(String emprunteurId, Date dateDeDebut, Date dateLimite, int codeDocument) {
         this.emprunteurId = emprunteurId;
         this.dateDeDebut = dateDeDebut;
         this.dateLimite = dateLimite;
         this.codeDocument = codeDocument;
     }
+    //getter et setter
     public String getEmprunteurId() {
         return emprunteurId;
     }
@@ -37,6 +40,7 @@ public class Emprunt {
     public void setCodeDocument(int codeDocument) {
         this.codeDocument = codeDocument;
     }
+    //methode to    string
     @Override
     public String toString() {
         return "Emprunt [emprunteurId=" + emprunteurId + ", dateDeDebut=" + dateDeDebut + ", dateLimite=" + dateLimite

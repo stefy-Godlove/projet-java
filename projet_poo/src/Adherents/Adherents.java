@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.Arrays;
 
 public class Adherents {
+    //attributs
     private String nom;
     private String prenom;
     private String identifiant;
@@ -13,6 +14,7 @@ public class Adherents {
     private int duree;
     private int empruntEffectues = 0;
     private Emprunt[] emprunt;
+    //constructeur
     public Adherents(String nom, String prenom, String identifiant, String adresse, String type) {
         this.nom = nom;
         this.prenom = prenom;
@@ -30,6 +32,7 @@ public class Adherents {
             duree = 1;
         }
     }
+    //getter et setter
     public String getNom() {
         return nom;
     }
@@ -72,7 +75,7 @@ public class Adherents {
  
 
 
-
+    //afficher une instanciation de la classe
     @Override
     public String toString() {
         return "Adherents [nom=" + nom + ", prenom=" + prenom + ", identifiant=" + identifiant + ", adresse=" + adresse
@@ -81,18 +84,18 @@ public class Adherents {
     public void Afficher(){
         System.out.println(this.toString());
     }
-
+    //methode pour emprunter un document
     public void Emprunter(Emprunt emprunt){
         this.emprunt[this.empruntEffectues] = emprunt;
         this.empruntEffectues++;
     }
-    
+    // methode pour afficher un emprunt
     public void afficheEmprunt(){
         for(int i =0;i < this.empruntEffectues;i++){
             System.out.println(this.emprunt[i].toString());
         }
     }
-
+    //methode pour remettre un document
     public void Remettre(int codeD, String IdEm, Date dateEmprunt ){
 
        for (int i = 0; i < this.empruntEffectues; i++) {
@@ -110,10 +113,11 @@ public class Adherents {
         }
        }
     }
+    //getter de l'attribut emprunt
     public Emprunt[] getEmprunt() {
         return emprunt;
     }
-
+    //methode pour voir des emprunts depasses
     public void EmpruntDepasse(int codeD, String IdEm, Date date ){
         int count = 0;
         for (int i = 0; i < this.empruntEffectues; i++) {
